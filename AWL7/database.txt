@@ -1,0 +1,102 @@
+system
+tiger
+
+
+
+create table login(
+name varchar(50),
+username varchar(20),
+password varchar(30)
+);
+
+select * from login
+
+
+student table
+
+create table student(
+sid varchar(10),
+name varchar(50),
+email varchar(100),
+dept varchar(50),
+sec varchar(20)
+);
+
+select * from student
+
+
+create teacher table
+
+create table teacher(
+tid varchar(10),
+name varchar(50),
+contact varchar(100),
+dept varchar(50),
+address varchar(20)
+); 
+
+select * from teacher
+
+login: 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+<h2>Login Here!</h2>
+    <form action="../controller/loginAction.php" method="post">
+        
+            
+            <label for="uname">Username</label>
+            <input type="text" name="uname" id="uname"><br><br>
+            <label for="pass">Password</label>
+            <input type="password" name="pass" id="pass"><br><br>
+            <input type="submit" value="Login">
+             
+        
+    </form>
+	<br>
+    <a href="../view/registration.html"><b>CREATE NEW ACCOUNT HERE !</b></a>
+</body>
+</html>
+
+
+
+registration: 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+</head>
+<body>
+    <h2>Do Registration Here!</h2>
+    <form action="../controller/registerAction.php" method="post" enctype="multipart/form-data">
+        
+            <legend>Create New Account</legend><br>
+
+            <label for="name">Name</label>
+            <input id="name" type="text" name="name" placeholder="Name"> <br><br>
+
+            <label for="uname">Username</label>
+            <input id="uname" type="text" name="uname" placeholder="User Name"> <br><br>
+
+            <label for="pass">Password</label>
+            <input id="pass" type="password" name="pass" placeholder="Password"> <br><br>
+
+            <input type="submit" value="Register">
+        
+    </form>
+	<br>
+    <a href="../view/login.html"><b>HAVE AN ACCOUNT? CLICK HERE TO LOGIN!</b></a>
+
+</body>
+</html>
